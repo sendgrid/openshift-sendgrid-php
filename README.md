@@ -18,7 +18,7 @@ Create a php-5.3 application (you can call your application whatever you want)
 Add this upstream Sendgrid repo
 <pre>
     cd sendgrid
-    git remote add upstream -m master https://github.com/mariusrusu/openshift-sendgrid-php
+    git remote add upstream -m master https://github.com/sendgrid/openshift-sendgrid-php
     git pull -s recursive -X theirs upstream master
 </pre>
 
