@@ -19,12 +19,18 @@ If `--from-code` is not recognized, update your `rhc` gem.
 
 Application code will be in `sendgrid` (or whatever you named your application).
 
+Create custom environment variables in OpenShift
+```
+   rhc set-env sendgrid_user=<username> sendgrid_password=<password> -a sendgrid
+```
+Set username and password based on what you used to sign up for a Sendgrid account and use the application name used to create your app.
+
 ###Configuration###
 Configure `php/send_email.php` file with your information:
 
-Update the username and password with your SendGrid credentials.
+Update the username and password with your SendGrid credentials from environment variables.
 ```php
-    $sendgrid = new SendGrid('<sendgrid_username>', '<sendgrid_password>');
+    $sendgrid = new SendGrid($_ENV["sendgrid_user"], $_ENV["sendgrid_password"]);
 ```
 
 Update your email address, subject, text content and html content:

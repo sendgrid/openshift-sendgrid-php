@@ -1,7 +1,7 @@
 <?php
   include 'libs/SendGrid_loader.php';
   
-  $sendgrid = new SendGrid('<sendgrid_username>', '<sendgrid_password>');
+  $sendgrid = new SendGrid($_ENV["sendgrid_user"], $_ENV["sendgrid_password"]);
 
   $mail = new SendGrid\Mail();
   $mail->
