@@ -25,7 +25,8 @@ Create custom environment variables in OpenShift
 ```
 Set username and password based on what you used to sign up for a SendGrid account and use the application name used to create your app.
 
-###Configuration###
+### Configuration
+
 Configure `php/send_email.php` file with your information:
 
 Update your email address, subject, text content and html content:
